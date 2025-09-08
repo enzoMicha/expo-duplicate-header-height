@@ -1,50 +1,59 @@
-# Welcome to your Expo app 👋
+# Expo Duplicate Header Height Issue
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+This repository demonstrates a header height issue that occurs in Expo after upgrading to the latest version.
 
-## Get started
+## Issue Description
 
-1. Install dependencies
+After upgrading to the latest Expo version, there appears to be a problem with duplicate or incorrect header heights in nested stack navigators. This issue affects the visual layout and user experience of the application.
+
+## Versions
+
+- **Expo**: ~53.0.22
+- **React Native**: 0.79.6
+- **React**: 19.0.0
+
+## Demonstration
+
+The issue can be observed in the following GIF:
+
+<img src="./data/Wrong%20Header%20Height%20in%20nested%20Stacks.gif" alt="Wrong Header Height in nested Stacks" width="300" />
+
+## Project Structure
+
+This project uses Expo Router with file-based routing and includes:
+
+- Nested stack navigators
+- Multiple layout files demonstrating the issue
+- Portal-based navigation structure
+
+## Getting Started
+
+1. Install dependencies:
 
    ```bash
    npm install
    ```
 
-2. Start the app
+2. Start the development server:
 
    ```bash
    npx expo start
    ```
 
-In the output, you'll find options to open the app in a
+3. Navigate through the app to observe the header height issue in the nested stack navigators.
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+## Reproduction Steps
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+1. Run the app using the commands above
+2. Navigate to the portal section
+3. Observe the incorrect header heights in the nested navigation structure
+4. The issue is particularly visible when transitioning between different screens within the portal
 
-## Get a fresh project
+## Expected vs Actual Behavior
 
-When you're ready, run:
+- **Expected**: Headers should have consistent and appropriate heights across all screens
+- **Actual**: Headers appear to have duplicate or incorrect heights, causing visual inconsistencies
 
-```bash
-npm run reset-project
-```
+## Related Issues
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
-
-## Learn more
-
-To learn more about developing your project with Expo, look at the following resources:
-
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
-
-## Join the community
-
-Join our community of developers creating universal apps.
-
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+This repository serves as a demonstration case for reporting and tracking the header height issue in Expo's latest version.
